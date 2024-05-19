@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA133FF12BFA60DF00AC1061 /* AddTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA133FF02BFA60DF00AC1061 /* AddTransactionView.swift */; };
 		AA2911192BFA036D00D2ADD1 /* _testApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2911182BFA036D00D2ADD1 /* _testApp.swift */; };
 		AA29111B2BFA036D00D2ADD1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA29111A2BFA036D00D2ADD1 /* ContentView.swift */; };
 		AA29111D2BFA036F00D2ADD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA29111C2BFA036F00D2ADD1 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA133FF02BFA60DF00AC1061 /* AddTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionView.swift; sourceTree = "<group>"; };
 		AA2911152BFA036D00D2ADD1 /* 2test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA2911182BFA036D00D2ADD1 /* _testApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _testApp.swift; sourceTree = "<group>"; };
 		AA29111A2BFA036D00D2ADD1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				AA29114B2BFA0F6500D2ADD1 /* Transaction.swift */,
 				AA29114D2BFA0F8B00D2ADD1 /* CryptoDetailView.swift */,
 				AA29114F2BFA118800D2ADD1 /* EditTransactionView.swift */,
+				AA133FF02BFA60DF00AC1061 /* AddTransactionView.swift */,
 			);
 			path = 2test;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				AA2911482BFA04EE00D2ADD1 /* CryptoService.swift in Sources */,
 				AA2911462BFA04C100D2ADD1 /* AddCryptoView.swift in Sources */,
 				AA2911502BFA118800D2ADD1 /* EditTransactionView.swift in Sources */,
+				AA133FF12BFA60DF00AC1061 /* AddTransactionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
