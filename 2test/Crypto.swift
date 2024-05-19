@@ -21,20 +21,22 @@ extension Crypto {
         (currentPrice ?? 0) * totalQuantity
     }
 
-    var profitLoss: Double {
-        totalValue - transactions.reduce(0) { $0 + $1.purchasePrice * $1.quantity }
-    }
-
-    var profitLossPercentage: Double {
-        (profitLoss / transactions.reduce(0) { $0 + $1.purchasePrice * $1.quantity }) * 100
-    }
-
     var totalProfitLoss: Double {
-        transactions.reduce(0) { $0 + (($1.currentPrice ?? 0) - $1.purchasePrice) * $1.quantity }
+        let totalSpent = transactions.reduce(0) { $0 + $1.purchasePrice * $1.quantity }
+        return totalValue - totalSpent
     }
 
     var totalProfitLossPercentage: Double {
         let totalSpent = transactions.reduce(0) { $0 + $1.purchasePrice * $1.quantity }
         return (totalProfitLoss / totalSpent) * 100
+    }
+
+    var profitLoss: Double {
+        totalValue - transactions.reduce(0) { $0 + $1.purchasePrice * $1.quantity }
+    }
+
+    var profitLossPercentage: Double {
+        let totalSpent = transactions.reduce(0) { $0 + $1.purchasePrice * $1.quantity }
+        return (profitLoss / totalSpent) * 100
     }
 }
