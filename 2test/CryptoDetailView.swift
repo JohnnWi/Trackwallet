@@ -49,29 +49,34 @@ struct CryptoDetailView: View {
                 }
                 .padding(.top, 10)
 
-                VStack {
-                    Text("PMedio")
-                        .font(.title2)
-                        .fontWeight(.semibold)
-                        .padding(.top, 10)
-                    Text("\(crypto.averagePurchasePrice, specifier: "%.2f") $")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(.blue)
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text("PMedio")
+                            .font(.title2)
+                            .fontWeight(.semibold)
+                        Text("\(crypto.averagePurchasePrice, specifier: "%.2f") $")
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .foregroundColor(.blue)
+                    }
+                    .padding(.horizontal)
+                    
+                    Spacer()
+                    
+                    VStack(alignment: .leading) {
+                        Text("P/L Totale")
+                            .font(.title2)
+                            .fontWeight(.semibold)
+                        Text("\(crypto.totalProfitLoss, specifier: "%.2f") $ (\(crypto.totalProfitLossPercentage, specifier: "%.2f")%)")
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .foregroundColor(crypto.totalProfitLoss >= 0 ? .green : .red)
+                    }
+                    .padding(.horizontal)
                 }
-                .padding()
-
-                VStack {
-                    Text("P/L Totale")
-                        .font(.title2)
-                        .fontWeight(.semibold)
-                        .padding(.top, 10)
-                    Text("\(crypto.totalProfitLoss, specifier: "%.2f") $ (\(crypto.totalProfitLossPercentage, specifier: "%.2f")%)")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(crypto.totalProfitLoss >= 0 ? .green : .red)
-                }
-                .padding()
+                .padding(.top, 10)
+                .background(RoundedRectangle(cornerRadius: 10).fill(Color(.systemGray6)))
+                .padding(.horizontal)
             }
             .padding(.bottom, 20)
 
