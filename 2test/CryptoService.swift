@@ -2,7 +2,7 @@ import Foundation
 
 class CryptoService {
     static let shared = CryptoService()
-    private let apiKey = "6d8d7549-2aed-45ea-a0c1-628bbe7a6260"
+    private let apiKey = "x"
     private let baseUrl = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest"
 
     func fetchCryptoData(for symbol: String, completion: @escaping (Result<Double, Error>) -> Void) {
